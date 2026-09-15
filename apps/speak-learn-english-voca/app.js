@@ -4,12 +4,6 @@ document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
-// TODO: replace with the real App Store listing URL once available.
-const APP_STORE_URL = "#";
-document.querySelectorAll("[data-app-store-link]").forEach((el) => {
-  el.setAttribute("href", APP_STORE_URL);
-});
-
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (!reduceMotion && "IntersectionObserver" in window) {

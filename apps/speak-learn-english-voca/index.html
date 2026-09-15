@@ -18,10 +18,10 @@
 
   <header class="nav">
     <a class="nav__brand" href="#top">
-      <span class="nav__mark" aria-hidden="true">V</span>
+      <img class="nav__mark" src="assets/icon.webp" alt="Voca app icon" width="32" height="32" />
       Voca
     </a>
-    <a class="btn btn--ghost nav__cta" href="#" data-app-store-link>Download</a>
+    <a class="btn btn--ghost nav__cta" href="https://apps.apple.com/us/app/speak-learn-english-voca/id6790738728" data-app-store-link>Download</a>
   </header>
 
   <main id="top">
@@ -32,7 +32,7 @@
         <h1 class="hero__headline">Speak English with an AI tutor built for you.</h1>
         <p class="hero__sub">Practice speaking, get instant translations, and build real confidence in English, right from your iPhone.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#" data-app-store-link>
+          <a class="btn btn--primary" href="https://apps.apple.com/us/app/speak-learn-english-voca/id6790738728" data-app-store-link>
             <i class="ph ph-apple-logo" aria-hidden="true"></i>
             Download on the App Store
           </a>
@@ -43,9 +43,8 @@
       <div class="hero__visual" data-reveal>
         <div class="phone-frame">
           <div class="phone-frame__glow" aria-hidden="true"></div>
-          <div class="app-tile">
-            <span class="app-tile__mark">V</span>
-          </div>
+          <img class="phone-frame__shot" src="assets/screenshot-chat.webp" alt="Voca chat screen: an AI tutor correcting an English sentence in real time" />
+          <img class="phone-frame__badge" src="assets/icon.webp" alt="" aria-hidden="true" />
         </div>
       </div>
     </section>
@@ -62,16 +61,44 @@
         </article>
 
         <article class="bento__cell bento__cell--accent" data-reveal>
+          <img class="bento__shot" src="assets/screenshot-translate.webp" alt="Voca real-time AI voice translate screen" />
+          <div class="bento__scrim"></div>
           <i class="ph ph-translate bento__icon" aria-hidden="true"></i>
           <h3>Translate instantly</h3>
           <p>Point, tap, or type. Get natural translations the moment you need them.</p>
         </article>
 
         <article class="bento__cell bento__cell--accent-2" data-reveal>
-          <i class="ph ph-microphone-stage bento__icon" aria-hidden="true"></i>
+          <img class="bento__shot" src="assets/screenshot-streak.webp" alt="Voca daily streak and progress screen" />
+          <div class="bento__scrim"></div>
+          <i class="ph ph-flame bento__icon" aria-hidden="true"></i>
           <h3>Practice daily</h3>
           <p>Short sessions built around how you actually talk, not flashcards.</p>
         </article>
+      </div>
+    </section>
+
+    <!-- Gallery: horizontal scroll-snap strip, distinct layout family -->
+    <section class="section gallery">
+      <h2 class="section__title">See Voca in action.</h2>
+
+      <div class="gallery__track" data-reveal>
+        <figure class="gallery__item">
+          <img src="assets/screenshot-photo.webp" alt="Smart photo translator screen: pointing a camera at printed text to translate it" />
+          <figcaption>Smart photo translator</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/screenshot-scenarios.webp" alt="Real-life scenario phrase lists for shopping, travel, and daily conversation" />
+          <figcaption>Real-life scenarios</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/screenshot-translate.webp" alt="Real-time AI voice translate screen" />
+          <figcaption>Real-time voice translate</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/screenshot-streak.webp" alt="Daily streak and learning progress screen" />
+          <figcaption>Ten minutes a day</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -100,11 +127,31 @@
       </div>
     </section>
 
+    <!-- Testimonials: quote list, distinct layout family -->
+    <section class="section testimonials">
+      <h2 class="section__title">Joined by thousands of learners.</h2>
+
+      <div class="testimonials__row">
+        <figure class="testimonial" data-reveal>
+          <blockquote>"Voca helped me double my vocabulary in just a few weeks. The daily exercises are perfect."</blockquote>
+          <figcaption>Maria S.</figcaption>
+        </figure>
+        <figure class="testimonial" data-reveal>
+          <blockquote>"I finally feel confident speaking English at my job. Highly recommend."</blockquote>
+          <figcaption>Kenji T.</figcaption>
+        </figure>
+        <figure class="testimonial" data-reveal>
+          <blockquote>"The best app for quick and easy learning. I use it on my commute every day."</blockquote>
+          <figcaption>Elena R.</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <!-- Closing CTA -->
     <section class="section cta">
       <div class="cta__box" data-reveal>
         <h2>Your English tutor is waiting on the App Store.</h2>
-        <a class="btn btn--primary" href="#" data-app-store-link>
+        <a class="btn btn--primary" href="https://apps.apple.com/us/app/speak-learn-english-voca/id6790738728" data-app-store-link>
           <i class="ph ph-apple-logo" aria-hidden="true"></i>
           Download on the App Store
         </a>
@@ -115,7 +162,7 @@
 
   <footer class="footer">
     <div class="footer__brand">
-      <span class="nav__mark" aria-hidden="true">V</span>
+      <img class="nav__mark" src="assets/icon.webp" alt="" aria-hidden="true" width="32" height="32" />
       Voca
     </div>
     <p class="footer__meta">Speak &amp; Learn English: Voca &middot; Available for iPhone &middot; &copy; <span data-year></span></p>
