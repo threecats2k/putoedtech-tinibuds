@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BatMoji — Emoji Battery Widget</title>
+  <meta name="description" content="BatMoji turns your battery into an adorable companion, with cute charging animations, fun lock screen themes, and easy DIY wallpapers." />
+  <meta name="theme-color" content="#1A0F24" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <a class="nav__brand" href="#top">
+      <span class="nav__mark" aria-hidden="true">B</span>
+      BatMoji
+    </a>
+    <a class="btn btn--ghost nav__cta" href="#" data-app-store-link>Coming soon</a>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero: asymmetric split -->
+    <section class="hero">
+      <div class="hero__copy" data-reveal>
+        <h1 class="hero__headline">Turn your battery into an adorable companion.</h1>
+        <p class="hero__sub">Cute charging animations, fun lock screen themes, and easy DIY wallpapers made just for you.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#" data-app-store-link>
+            <i class="ph ph-sparkle" aria-hidden="true"></i>
+            Coming soon to the App Store
+          </a>
+        </div>
+        <p class="hero__meta">Only for iPhone · Launching soon</p>
+      </div>
+
+      <div class="hero__visual" data-reveal>
+        <div class="phone-frame">
+          <div class="phone-frame__glow" aria-hidden="true"></div>
+          <img class="phone-frame__shot" src="assets/screenshot-battery.png" alt="BatMoji emoji battery screen with a set of cute bunny expression stickers" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features: asymmetric bento, 3 cells -->
+    <section class="section features">
+      <h2 class="section__title">Three tabs, endless ways to make it yours.</h2>
+
+      <div class="bento">
+        <article class="bento__cell bento__cell--large" data-reveal>
+          <i class="ph ph-battery-charging bento__icon" aria-hidden="true"></i>
+          <h3>Give your battery a face</h3>
+          <p>Expressive emoji stickers react to your battery level, with packs like Silly Bunny, Cutie Bear, and Anime.</p>
+        </article>
+
+        <article class="bento__cell bento__cell--accent" data-reveal>
+          <img class="bento__shot" src="assets/screenshot-charging.png" alt="BatMoji DIY charging animation screen with a cute character riding a go-kart" />
+          <div class="bento__scrim"></div>
+          <i class="ph ph-lightning bento__icon" aria-hidden="true"></i>
+          <h3>Charge with charm</h3>
+          <p>Build your own charging animation, or pick one from the Cute, Anime, and Cyber collections.</p>
+        </article>
+
+        <article class="bento__cell bento__cell--accent-2" data-reveal>
+          <img class="bento__shot" src="assets/screenshot-wallpaper.png" alt="BatMoji DIY wallpaper screen with a pastel lock screen theme" />
+          <div class="bento__scrim"></div>
+          <i class="ph ph-image bento__icon" aria-hidden="true"></i>
+          <h3>Wallpapers that feel like you</h3>
+          <p>Dozens of DIY lock screen themes, from dreamy pastels to aesthetic night skies.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Styles: chip row, distinct layout family -->
+    <section class="section styles">
+      <h2 class="section__title">A style for every mood.</h2>
+      <p class="styles__sub">Mix and match across every tab, no two setups ever look the same.</p>
+      <ul class="styles__chips">
+        <li>Cute</li>
+        <li>Anime</li>
+        <li>Animals</li>
+        <li>Cyber</li>
+        <li>Aesthetic</li>
+        <li>3D</li>
+      </ul>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="section cta">
+      <div class="cta__box" data-reveal>
+        <h2>BatMoji is charging up for launch.</h2>
+        <a class="btn btn--primary" href="#" data-app-store-link>
+          <i class="ph ph-sparkle" aria-hidden="true"></i>
+          Coming soon to the App Store
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="nav__mark" aria-hidden="true">B</span>
+      BatMoji
+    </div>
+    <p class="footer__meta">BatMoji: Emoji Battery Widget &middot; Cute Battery Widgets &amp; Themes &middot; Coming soon for iPhone &middot; &copy; <span data-year></span></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
