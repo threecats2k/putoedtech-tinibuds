@@ -25,5 +25,14 @@
     "accent": "#E85FD1",
     "accent2": "#8C5CF5",
     "badge": "B"
+  },
+  {
+    "slug": "test-delete-me",
+    "name": "Test Delete Me",
+    "tagline": "Just a smoke test",
+    "appStoreUrl": "",
+    "accent": "#34D399",
+    "accent2": "#059669",
+    "badge": "T"
   }
 ]
