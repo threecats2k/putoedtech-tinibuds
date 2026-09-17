@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Store Page — App Directory</title>
+  <meta name="description" content="Directory of app landing pages hosted in this repository." />
+  <meta name="theme-color" content="#0B0B0F" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0B0B0F;
+      --bg-elevated: #16161D;
+      --text: #F2F2F5;
+      --text-muted: #9A9AA7;
+      --border: rgba(242, 242, 245, 0.08);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --font-display: "Outfit", "Segoe UI", sans-serif;
+      --font-body: "Manrope", "Segoe UI", sans-serif;
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: 960px;
+      margin-inline: auto;
+      padding: 80px 24px 96px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+    }
+
+    .lede {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 60ch;
+      margin: 0 0 48px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      display: block;
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent, #6C6CF5);
+    }
+
+    .card__badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .voca .card__badge { background: linear-gradient(135deg, #FF6A45, #FF3D2E); }
+    .vpn .card__badge { background: linear-gradient(135deg, #29B6F6, #0B84C4); }
+    .batmoji .card__badge { background: linear-gradient(135deg, #E85FD1, #8C5CF5); }
+
+    footer {
+      max-width: 960px;
+      margin-inline: auto;
+      padding: 0 24px 48px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>App landing pages</h1>
+    <p class="lede">Directory of the app store landing pages hosted in this repository, each with its own app-ads.txt.</p>
+
+    <div class="grid">
+      <a class="card voca" href="apps/speak-learn-english-voca/">
+        <span class="card__badge">V</span>
+        <h2>Speak &amp; Learn English: Voca</h2>
+        <p>AI Tutor &amp; Smart Translator</p>
+      </a>
+
+      <a class="card vpn" href="apps/gaming-vpn-fast-secure-proxy/">
+        <span class="card__badge">G</span>
+        <h2>Gaming VPN</h2>
+        <p>Fast Secure Proxy</p>
+      </a>
+
+      <a class="card batmoji" href="apps/batmoji-emoji-battery-widget/">
+        <span class="card__badge">B</span>
+        <h2>BatMoji</h2>
+        <p>Emoji Battery Widget &middot; Coming soon</p>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Store Page
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
