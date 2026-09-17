@@ -105,9 +105,10 @@
       font-size: 0.92rem;
     }
 
-    .voca .card__badge { background: linear-gradient(135deg, #FF6A45, #FF3D2E); }
-    .vpn .card__badge { background: linear-gradient(135deg, #29B6F6, #0B84C4); }
-    .batmoji .card__badge { background: linear-gradient(135deg, #E85FD1, #8C5CF5); }
+    .empty {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
 
     footer {
       max-width: 960px;
@@ -123,24 +124,8 @@
     <h1>App landing pages</h1>
     <p class="lede">Directory of the app store landing pages hosted in this repository, each with its own app-ads.txt.</p>
 
-    <div class="grid">
-      <a class="card voca" href="apps/speak-learn-english-voca/">
-        <span class="card__badge">V</span>
-        <h2>Speak &amp; Learn English: Voca</h2>
-        <p>AI Tutor &amp; Smart Translator</p>
-      </a>
-
-      <a class="card vpn" href="apps/gaming-vpn-fast-secure-proxy/">
-        <span class="card__badge">G</span>
-        <h2>Gaming VPN</h2>
-        <p>Fast Secure Proxy</p>
-      </a>
-
-      <a class="card batmoji" href="apps/batmoji-emoji-battery-widget/">
-        <span class="card__badge">B</span>
-        <h2>BatMoji</h2>
-        <p>Emoji Battery Widget &middot; Coming soon</p>
-      </a>
+    <div class="grid" id="app-grid">
+      <p class="empty">Loading apps…</p>
     </div>
   </main>
 
@@ -150,6 +135,37 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    function escapeHtml(str) {
+      const div = document.createElement("div");
+      div.textContent = str ?? "";
+      return div.innerHTML;
+    }
+
+    fetch("apps.json")
+      .then((res) => res.json())
+      .then((apps) => {
+        const grid = document.getElementById("app-grid");
+        if (!Array.isArray(apps) || apps.length === 0) {
+          grid.innerHTML = '<p class="empty">No apps yet.</p>';
+          return;
+        }
+        grid.innerHTML = apps
+          .map((app) => {
+            const badgeStyle = `background: linear-gradient(135deg, ${app.accent || "#6C6CF5"}, ${app.accent2 || app.accent || "#6C6CF5"});`;
+            return `
+              <a class="card" href="apps/${escapeHtml(app.slug)}/" style="--accent: ${escapeHtml(app.accent || "#6C6CF5")}">
+                <span class="card__badge" style="${badgeStyle}">${escapeHtml(app.badge || (app.name || "?").charAt(0).toUpperCase())}</span>
+                <h2>${escapeHtml(app.name)}</h2>
+                <p>${escapeHtml(app.tagline)}</p>
+              </a>
+            `;
+          })
+          .join("");
+      })
+      .catch(() => {
+        document.getElementById("app-grid").innerHTML = '<p class="empty">Could not load app list.</p>';
+      });
   </script>
 </body>
 </html>

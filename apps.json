@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "speak-learn-english-voca",
+    "name": "Speak & Learn English: Voca",
+    "tagline": "AI Tutor & Smart Translator",
+    "appStoreUrl": "https://apps.apple.com/us/app/speak-learn-english-voca/id6790738728",
+    "accent": "#FF6A45",
+    "accent2": "#FF3D2E",
+    "badge": "V"
+  },
+  {
+    "slug": "gaming-vpn-fast-secure-proxy",
+    "name": "Gaming VPN",
+    "tagline": "Fast Secure Proxy",
+    "appStoreUrl": "https://apps.apple.com/us/app/gaming-vpn-fast-secure-proxy/id6758660096",
+    "accent": "#29B6F6",
+    "accent2": "#0B84C4",
+    "badge": "G"
+  },
+  {
+    "slug": "batmoji-emoji-battery-widget",
+    "name": "BatMoji",
+    "tagline": "Emoji Battery Widget · Coming soon",
+    "appStoreUrl": "",
+    "accent": "#E85FD1",
+    "accent2": "#8C5CF5",
+    "badge": "B"
+  }
+]
